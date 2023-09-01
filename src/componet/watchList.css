@@ -1,0 +1,7 @@
+#likeIcon{
+    visibility: hidden;
+}
+
+#likeIcon :hover{
+    visibility: visible;
+}

@@ -1,0 +1,17 @@
+#stockDataItem{
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+}
+/* #likeIcon :hover{
+    visibility: visible;
+} */
+
+.iconButton {
+    /* visibility: hidden; */
+}
+
+.iconButton :hover{
+    visibility: visible;
+    
+}

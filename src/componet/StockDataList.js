@@ -1,7 +1,8 @@
 import sampleData from '../sample.json';
-import { Box, Button, Grid, IconButton, Typography } from '@mui/material';
+import { Box, IconButton, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import './stockDataItem.css';
 import { useDispatch } from 'react-redux';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
@@ -30,10 +31,13 @@ export const StockDataList =()=>{
        
                     <Box id="stockDataItem" width={500}  sx={{mb:2}}>
                         <Grid2 xs={6} sx={{ display:'flex' , flexDirection:"column"  }} >
-                            <Typography sx={{display: 'flex'}}>
-                                <Typography sx={{marginRight:10}}>{element.name}</Typography>
-                                <IconButton   onClick={()=>{ dispatch(addToWatchList(element))}} ><FavoriteBorderIcon  onClick={handleClick} sx={{color : "black"}}  /></IconButton> 
-                            </Typography>
+                            
+                                <Typography sx={{}}>
+                                    {element.name}
+                                    <IconButton   onClick={()=>{ dispatch(addToWatchList(element))}} ><FavoriteBorderIcon  onClick={handleClick} sx={{color : "black"}}  /> <ShoppingCartIcon/></IconButton> 
+                                </Typography>
+
+                        
                 
                             <Typography sx={{mt:-1, width: "80px",textAlign:'center' ,bgcolor:"grey"}}>{element.stockExchange}</Typography>
                         </Grid2>

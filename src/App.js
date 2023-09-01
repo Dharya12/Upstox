@@ -1,14 +1,18 @@
-
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import './App.css';
-import { StockDataList } from './componet/StockDataList';
 import  CustomTabPanel from './componet/Tab';
+import { Typography } from '@mui/material';
 
 function App() {
   return (
-    <div>
-      <h1>Welcome to Upstox</h1>
+    <Grid2>
+      <Grid2 sx={{display : 'flex' , flexDirection:'column', justifyContent:'center' , alignItems :'center'}}>
+          <Typography variant='h4' sx={{marginTop : 2}} >Welcome To Upstox</Typography>
+          <Typography variant='h5' sx={{marginTop : 2}}>Start trading to see some magic happen!</Typography>
+      </Grid2>
+      
       <CustomTabPanel/>
-    </div>
+    </Grid2>
   );
 }
 
